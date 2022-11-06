@@ -1,0 +1,137 @@
+{
+    "corePlusPlatform": {
+        "workspaces": {
+            "src": "/",
+            "isFrame": true
+        },
+        "applications": {
+            "local": [
+                {
+                    "name": "React Client",
+                    "type": "window",
+                    "title": "React Client",
+                    "details": {
+                        "url": "http://localhost:3001/"
+                    },
+                    "customProperties": {
+                        "includeInWorkspaces": true
+                    }
+                },
+                {
+                    "name": "interop-viewer",
+                    "type": "window",
+                    "title": "Interop Viewer",
+                    "details": {
+                        "url": "https://devtools.glue42.com/js-interop-viewer/index.html"
+                    },
+                    "customProperties": {
+                        "includeInWorkspaces": true
+                    }
+                },
+                {
+                    "name": "StreamSubscription",
+                    "type": "window",
+                    "title": "StreamSubscription",
+                    "details": {
+                        "url": "https://devtools.glue42.com/js-interop-viewer/index.html#/stream-subscription"
+                    },
+                    "hidden": true
+                },
+                {
+                    "name": "InvokeMethod",
+                    "type": "window",
+                    "title": "InvokeMethod",
+                    "details": {
+                        "url": "https://devtools.glue42.com/js-interop-viewer/index.html#/invoke-method"
+                    },
+                    "hidden": true
+                },
+                {
+                    "name": "context-viewer",
+                    "type": "window",
+                    "title": "Context Viewer",
+                    "details": {
+                        "url": "https://devtools.glue42.com/js-context-viewer/index.html"
+                    },
+                    "customProperties": {
+                        "includeInWorkspaces": true
+                    }
+                }
+            ]
+        },
+        "channels": {
+            "definitions": [
+                {
+                    "name": "Red",
+                    "meta": {
+                        "color": "red",
+                        "name": "Red"
+                    }
+                },
+                {
+                    "name": "Green",
+                    "meta": {
+                        "color": "green",
+                        "name": "Green"
+                    }
+                },
+                {
+                    "name": "Blue",
+                    "meta": {
+                        "color": "#66ABFF",
+                        "name": "Blue"
+                    }
+                },
+                {
+                    "name": "Pink",
+                    "meta": {
+                        "color": "#F328BB",
+                        "name": "Pink"
+                    }
+                },
+                {
+                    "name": "Yellow",
+                    "meta": {
+                        "color": "#FFE733",
+                        "name": "Yellow"
+                    }
+                },
+                {
+                    "name": "Dark Yellow",
+                    "meta": {
+                        "color": "#b09b00",
+                        "name": "Dark Yellow"
+                    }
+                },
+                {
+                    "name": "Orange",
+                    "meta": {
+                        "color": "#fa5a28",
+                        "name": "Orange"
+                    }
+                },
+                {
+                    "name": "Purple",
+                    "meta": {
+                        "color": "#c873ff",
+                        "name": "Purple"
+                    }
+                },
+                {
+                    "name": "Lime",
+                    "meta": {
+                        "color": "#8af59e",
+                        "name": "Lime"
+                    }
+                },
+                {
+                    "name": "Cyan",
+                    "meta": {
+                        "color": "#80f3ff",
+                        "name": "Cyan"
+                    }
+                }
+            ]
+        }
+    }
+}
