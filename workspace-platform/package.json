@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@glue42/core-plus": "^1.0.1",
     "@glue42/react-hooks": "^2.8.7",
     "@glue42/workspaces-api": "^1.17.2",
     "@glue42/workspaces-ui-react": "^2.0.3",

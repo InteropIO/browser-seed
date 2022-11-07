@@ -5,16 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlueProvider } from '@glue42/react-hooks';
 import Glue from "@glue42/desktop";
-import GlueWebPlatform from "@glue42/web-platform";
+import Glue42CorePlus, { Glue42CorePlusConfig } from "@glue42/core-plus";
 import GlueWorkspaces from "@glue42/workspaces-api";
 import config from "./config.json";
+
+navigator.serviceWorker.register('/service-worker.js');
 
 ReactDOM.render(
   <React.StrictMode>
     <GlueProvider settings={{
       webPlatform: {
-        config: Object.assign({}, config.corePlusPlatform, { glue: { libraries: [GlueWorkspaces] } }),
-        factory: GlueWebPlatform
+        config: Object.assign({}, config.corePlusPlatform, { glue: { libraries: [GlueWorkspaces] } }) as Glue42CorePlusConfig,
+        factory: Glue42CorePlus
       },
       desktop: {
         config: { libraries: [GlueWorkspaces], appManager: "skipIcons" },

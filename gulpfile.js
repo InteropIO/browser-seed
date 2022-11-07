@@ -57,3 +57,7 @@ exports.bootstrap = series(
 exports.build = parallel(clients.map((client) => buildProdApp(client)));
 
 exports.start = parallel(clients.map((client) => startApp(client)));
+
+exports.updateConfig = series(
+    copyPlatformConfig
+);
