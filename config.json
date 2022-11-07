@@ -14,17 +14,6 @@
         "applications": {
             "local": [
                 {
-                    "name": "NEW React Client",
-                    "type": "window",
-                    "title": "NEW React Client",
-                    "details": {
-                        "url": "http://localhost:3001/"
-                    },
-                    "customProperties": {
-                        "includeInWorkspaces": true
-                    }
-                },
-                {
                     "name": "React Client",
                     "type": "window",
                     "title": "React Client",
