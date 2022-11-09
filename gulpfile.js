@@ -2,6 +2,7 @@ const { series, parallel } = require("gulp");
 const spawn = require("child_process").spawn;
 const copyFile = require("node:fs/promises").copyFile;
 const rimraf = require("rimraf");
+const path = require("path");
 
 const clients = ["workspace-platform/", "react-client/"];
 
@@ -15,21 +16,26 @@ const installAllDeps = (client) => async () => {
 
 const clearNodeModules = (client) => () => {
     return new Promise((resolve, reject) => {
-        rimraf(`./${client}/node_modules/*`, (err) => {
-            console.log(`Deleting: ./${client}/node_modules/*`);
+
+        const node_modulesPath = path.join(__dirname, client, "node_modules", "*");
+
+        console.log(`Deleting: ${node_modulesPath}`);
+
+        rimraf(node_modulesPath, (err) => {
 
             if (err) {
                 return reject(err);
             }
 
-            console.log(`Deleted: ./${client}/node_modules/*`);
+            console.log(`Deleted: ${node_modulesPath}`);
+
             resolve()
         });
     });
 };
 
 const copyPlatformConfig = async () => {
-    await copyFile("./config.json", "./workspace-platform/src/config.json");
+    await copyFile(path.join(__dirname, "config.json"), path.join(__dirname, "workspace-platform", "src", "config.json"));
 };
 
 const buildProdApp = (client) => async () => {
