@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import './App.css';
+import logo from './core-plus-symbol.svg';
 import { GlueContext } from '@glue42/react-hooks';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <img src="./logo512.png" className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo" />
                 <p>
                     Edit <code>src/App.tsx</code> and save to reload.
                 </p>
