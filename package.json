@@ -16,6 +16,7 @@
   "devDependencies": {
     "concurrently": "^7.5.0",
     "gulp": "^4.0.2",
+    "http-server": "^14.1.1",
     "rimraf": "^3.0.2"
   }
 }

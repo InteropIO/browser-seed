@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlueProvider } from '@glue42/react-hooks';
 import GlueWeb from "@glue42/web";
+import GlueWorkspaces from '@glue42/workspaces-api';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -13,7 +14,7 @@ root.render(
     <React.StrictMode>
         <GlueProvider settings={{
             web: {
-                config: {},
+                config: { libraries: [GlueWorkspaces] },
                 factory: GlueWeb
             }
         }}>

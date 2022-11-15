@@ -4,7 +4,8 @@ const copyFile = require("node:fs/promises").copyFile;
 const rimraf = require("rimraf");
 const path = require("path");
 
-const clients = ["workspace-platform/", "react-client/"];
+const clientsSources = ["workspace-platform/", "react-client/"];
+const builtClients = ["intents-resolver-ui/"];
 
 const installAllDeps = (client) => async () => {
     return new Promise((resolve, reject) => {
@@ -54,15 +55,26 @@ const startApp = (client) => async () => {
     });
 };
 
+const startBuildClient = (client) => async () => {
+    return new Promise((resolve, reject) => {
+        console.log(`Starting ${client}`);
+
+        spawn("http-server", [`${client}`, "-p", "4221"], { stdio: "inherit", shell: true }).on("close", resolve).on("error", reject);
+    });
+};
+
 exports.bootstrap = series(
-    parallel(clients.map((client) => clearNodeModules(client))),
-    parallel(clients.map((client) => installAllDeps(client))),
+    parallel(clientsSources.map((client) => clearNodeModules(client))),
+    parallel(clientsSources.map((client) => installAllDeps(client))),
     copyPlatformConfig
 );
 
-exports.build = parallel(clients.map((client) => buildProdApp(client)));
+exports.build = parallel(clientsSources.map((client) => buildProdApp(client)));
 
-exports.start = parallel(clients.map((client) => startApp(client)));
+exports.start = parallel(
+    ...clientsSources.map((client) => startApp(client)),
+    ...builtClients.map((client) => startBuildClient(client))
+);
 
 exports.updateConfig = series(
     copyPlatformConfig
