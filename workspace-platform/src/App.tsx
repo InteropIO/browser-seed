@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Workspaces, { getFrameId } from "@glue42/workspaces-ui-react";
 import "@glue42/workspaces-ui-react/dist/styles/popups.css";
 import "@glue42/workspaces-ui-react/dist/styles/goldenlayout-base.css";
@@ -8,7 +8,7 @@ import "./index.css";
 import { Glue42Web } from "@glue42/web";
 import { Glue42 } from "@glue42/desktop";
 import { Glue42Workspaces } from "@glue42/workspaces-api";
-import { useGlue } from '@glue42/react-hooks';
+import { useGlue } from "@glue42/react-hooks";
 
 const App = () => {
     const waitForMyFrame = (glue: Glue42Web.API | Glue42.Glue) => {

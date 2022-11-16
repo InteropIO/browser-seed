@@ -7,6 +7,17 @@ const path = require("path");
 const clientsSources = ["workspace-platform/", "react-client/"];
 const builtClients = ["intents-resolver-ui/"];
 
+const originalStdoutWrite = process.stdout.write.bind(process.stdout);
+
+process.stdout.write = (chunk, encoding, callback) => {
+    if (chunk === '\x1B[2J\x1B[0f' || chunk === '\x1B[2J\x1B[3J\x1B[H') {
+        return;
+    }
+
+    return originalStdoutWrite(chunk, encoding, callback);
+};
+
+
 const installAllDeps = (client) => async () => {
     return new Promise((resolve, reject) => {
         console.log(`Installing dependencies in ${client}`);
@@ -43,7 +54,9 @@ const buildProdApp = (client) => async () => {
     return new Promise((resolve, reject) => {
         console.log(`Building prod bundle of ${client}`);
 
-        spawn("npm", ["build"], { cwd: `${client}`, stdio: "inherit", shell: true }).on("close", resolve).on("error", reject);
+        const child = spawn("npm", ["build"], { cwd: `${client}`, shell: true }).on("close", resolve).on("error", reject);
+
+        child.stdout.on('data', process.stdout.write);
     });
 };
 
@@ -51,7 +64,9 @@ const startApp = (client) => async () => {
     return new Promise((resolve, reject) => {
         console.log(`Starting ${client}`);
 
-        spawn("npm", ["start"], { cwd: `${client}`, stdio: "inherit", shell: true }).on("close", resolve).on("error", reject);
+        const child = spawn("npm", ["start"], { cwd: `${client}`, shell: true }).on("close", resolve).on("error", reject);
+
+        child.stdout.on('data', process.stdout.write);
     });
 };
 
