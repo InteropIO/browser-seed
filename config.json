@@ -74,7 +74,16 @@
                     "customProperties": {
                         "includeInWorkspaces": true
                     }
-                }
+                },
+				{
+					"name": "intentsResolver",
+					"type": "window",
+					"title": "Intents Resolver",
+					"details": {
+						"url": "http://localhost:4221/"
+					},
+					"customProperties": {}
+				}
             ]
         },
         "channels": {
