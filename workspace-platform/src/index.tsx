@@ -13,7 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <GlueProvider settings={{
       webPlatform: {
-        config: Object.assign({}, config.corePlusPlatform, { glue: { libraries: [GlueWorkspaces] }, serviceWorker: { url: "/service-worker.js" } }) as Glue42CorePlusConfig,
+        config: Object.assign({}, config.corePlusPlatform, { glue: { libraries: [GlueWorkspaces], systemLogger: { level: "info" } }, serviceWorker: { url: "/service-worker.js" } }) as Glue42CorePlusConfig,
         factory: Glue42CorePlus
       },
       desktop: {

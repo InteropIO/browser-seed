@@ -5,6 +5,11 @@
             "src": "/",
             "isFrame": true
         },
+        "gateway": {
+            "logging": {
+                "level": "warn"
+            }
+        },
         "layouts": {
             "mode": "idb",
             "local": [
