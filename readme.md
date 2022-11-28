@@ -32,7 +32,7 @@ npm start
 
 ## Configuration
 
-The only configuration required to run the project is to add your license key for Glue42 Core Plus, because it requires a license token to initialize. Please contact Glue42 Sales team at sales@glue42.com to obtain a license token.
+The only configuration required to run the project is to add your license key for Glue42 Core Plus, because it requires a license token to initialize. Please contact Glue42 Sales team at licensing@glue42.com to obtain a license token.
 
 All of the configuration is located in one place - the `./config.json` file. 
 
