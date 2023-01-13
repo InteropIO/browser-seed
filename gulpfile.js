@@ -54,7 +54,7 @@ const buildProdApp = (client) => async () => {
     return new Promise((resolve, reject) => {
         console.log(`Building prod bundle of ${client}`);
 
-        const child = spawn("npm", ["build"], { cwd: `${client}`, shell: true }).on("close", resolve).on("error", reject);
+        const child = spawn("npm", ["run", "build"], { cwd: `${client}`, shell: true }).on("close", resolve).on("error", reject);
 
         child.stdout.on('data', process.stdout.write);
     });
