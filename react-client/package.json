@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@glue42/react-hooks": "^2.11.2",
+    "@glue42/react-hooks": "^2.11.3",
     "@glue42/workspaces-api": "^1.18.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
