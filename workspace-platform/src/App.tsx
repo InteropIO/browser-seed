@@ -34,6 +34,15 @@ const App = () => {
     };
 
     useGlue(async (glue) => {
+
+        const isPlatform = (window as any).glue42core?.isPlatformFrame;
+
+        if (!isPlatform) {
+            // if this frame is not a platform, we do not wish to load the welcome workspace
+            // instead we wish to load the workspace provided to the restore function
+            return;
+        }
+
         const myFrame = await waitForMyFrame(glue);
         const wsp = (await myFrame.workspaces())[0];
         const newWsp = await glue.workspaces?.restoreWorkspace("Welcome", { title: "Welcome", reuseWorkspaceId: wsp.id });
