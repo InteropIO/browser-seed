@@ -16,7 +16,7 @@ const myControlInterceptionHandler = async (controlMessage: Glue42WebPlatform.Co
     console.log(controlMessage);
 
     // OPTIONAL calling the default implementation:
-    const result = await platform.control({ ...controlMessage, settings: { skipInterception: true } });
+    const result = await platform.system.sendControl({ ...controlMessage, settings: { skipInterception: true } })
 
     return result;
 };
