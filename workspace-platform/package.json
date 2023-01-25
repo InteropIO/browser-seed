@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "@glue42/core-plus": "^1.0.11",
-    "@glue42/react-hooks": "^2.11.3",
-    "@glue42/workspaces-api": "^1.18.2",
-    "@glue42/workspaces-ui-react": "^2.0.12",
+    "@glue42/core-plus": "^1.1.0",
+    "@glue42/react-hooks": "^2.12.0",
+    "@glue42/workspaces-api": "^1.19.0",
+    "@glue42/workspaces-ui-react": "^2.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
