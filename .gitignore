@@ -24,3 +24,5 @@ react-client/node_modules/*
 react-client/build/*
 workspace-platform/node_modules/*
 workspace-platform/build/*
+excelpad-server/node_modules/*
+client-list-portfolio-contact/node_modules/*

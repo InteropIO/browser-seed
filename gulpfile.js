@@ -4,8 +4,45 @@ const copyFile = require("node:fs/promises").copyFile;
 const rimraf = require("rimraf");
 const path = require("path");
 
-const clientsSources = ["workspace-platform/", "react-client/"];
-const builtClients = ["intents-resolver-ui/"];
+const clientsSources = ["workspace-platform/",];
+const builtClients = [
+    {
+        command: "http-server",
+        args: ["intents-resolver-ui/", "-p", "4221"],
+        id: "Intents Resolver UI",
+    },{
+    //     id: "SF PROD server",
+    //     command: "npm run start",
+    //     folder: "excelpad-server/",
+    //     args: [],
+    // },{
+        id: "SF STG server",
+        command: "npm run start:sf:stg",
+        folder: "excelpad-server/",
+        args: [],
+    // },{
+    //     id: "SF DEV server",
+    //     command: "npm run start:sf:dev",
+    //     folder: "excelpad-server/",
+    //     args: [],
+    },{
+        id: "SF Nerxi server",
+        command: "npm run start:sf:nerxi",
+        folder: "excelpad-server/",
+        args: [],
+    // },{
+    //     id: "SF Marto server",
+    //     command: "npm run start:sf:marto",
+    //     folder: "excelpad-server/",
+    //     args: [],
+    // },{
+    //     id: "Clients",
+    //     command: "npm run dev:core:seed",
+    //     folder: "client-list-portfolio-contact/",
+    //     // port: 22080,
+    //     args: [],
+    }
+    ];
 
 const originalStdoutWrite = process.stdout.write.bind(process.stdout);
 
@@ -62,7 +99,7 @@ const buildProdApp = (client) => async () => {
 
 const startApp = (client) => async () => {
     return new Promise((resolve, reject) => {
-        console.log(`Starting ${client}`);
+        console.log(`Glue Starting ${client}`);
 
         const child = spawn("npm", ["start"], { cwd: `${client}`, shell: true }).on("close", resolve).on("error", reject);
 
@@ -70,11 +107,15 @@ const startApp = (client) => async () => {
     });
 };
 
-const startBuildClient = (client) => async () => {
+const startBuildClient = (clientCfg) => async () => {
     return new Promise((resolve, reject) => {
-        console.log(`Starting ${client}`);
+        console.log(`Glue Starting ${clientCfg.id}`);
+        const more = { stdio: "inherit", shell: true };
+        if (clientCfg.folder) {
+            more.cwd = `${clientCfg.folder}`;
+        }
 
-        spawn("http-server", [`${client}`, "-p", "4221"], { stdio: "inherit", shell: true }).on("close", resolve).on("error", reject);
+        spawn(clientCfg.command, clientCfg.args, more).on("close", resolve).on("error", reject);
     });
 };
 
@@ -88,7 +129,7 @@ exports.build = parallel(clientsSources.map((client) => buildProdApp(client)));
 
 exports.start = parallel(
     ...clientsSources.map((client) => startApp(client)),
-    ...builtClients.map((client) => startBuildClient(client))
+    ...builtClients.map((clientCfg) => startBuildClient(clientCfg))
 );
 
 exports.updateConfig = series(
