@@ -1,6 +1,11 @@
 {
     "corePlusPlatform": {
-        "licenseKey": "",
+        "connection": {
+            "preferred": {
+                "url": "ws://localhost:8385/gw",
+                "discoveryIntervalMS": 10000
+            }
+        },
         "workspaces": {
             "src": "/",
             "isFrame": true
@@ -8,7 +13,241 @@
         "layouts": {
             "mode": "idb",
             "local": [
-                {"name":"Welcome","type":"Workspace","metadata":null,"components":[{"type":"Workspace","state":{"children":[{"type":"row","children":[{"type":"group","children":[{"type":"window","config":{"minHeight":20,"allowReorder":true,"widthInPx":957,"maxHeight":32767,"allowExtract":true,"minWidth":20,"appName":"React Client","context":{},"title":"React Client","showCloseButton":true,"isSelected":true,"heightInPx":918,"maxWidth":32767,"isMaximized":false,"isFocused":false}}],"config":{"allowDropBottom":true,"workspaceId":"0XfglHadW","width":50,"showMaximizeButton":true,"minHeight":50,"height":null,"allowDropRight":true,"positionIndex":0,"allowReorder":true,"allowDrop":true,"isPinned":false,"widthInPx":957,"maxHeight":32767,"showEjectButton":true,"allowExtract":true,"minWidth":20,"activeTabIndex":0,"maximizationBoundary":false,"frameId":"ZSLsfL8gK","showAddWindowButton":true,"allowDropTop":true,"heightInPx":948,"maxWidth":32767,"isMaximized":false,"allowDropLeft":true,"allowDropHeader":true}},{"type":"group","children":[{"type":"window","config":{"minHeight":20,"allowReorder":true,"widthInPx":957,"maxHeight":32767,"allowExtract":true,"minWidth":20,"appName":"Glue42 Core Plus Docs","context":{},"title":"Documentation","showCloseButton":true,"isSelected":true,"heightInPx":918,"maxWidth":32767,"isMaximized":false,"isFocused":false}},{"type":"window","config":{"minHeight":20,"allowReorder":true,"widthInPx":0,"maxHeight":32767,"allowExtract":true,"minWidth":20,"appName":"context-viewer","context":{},"title":"Context Viewer","showCloseButton":true,"isSelected":false,"heightInPx":0,"maxWidth":32767,"isMaximized":false,"isFocused":false}},{"type":"window","config":{"minHeight":20,"allowReorder":true,"widthInPx":0,"maxHeight":32767,"allowExtract":true,"minWidth":20,"appName":"interop-viewer","context":{},"title":"Interop Viewer","showCloseButton":true,"isSelected":false,"heightInPx":0,"maxWidth":32767,"isMaximized":false,"isFocused":false}}],"config":{"allowDropBottom":true,"workspaceId":"0XfglHadW","width":50,"showMaximizeButton":true,"minHeight":50,"height":null,"allowDropRight":true,"positionIndex":1,"allowReorder":true,"allowDrop":true,"isPinned":false,"widthInPx":957,"maxHeight":32767,"showEjectButton":true,"allowExtract":true,"minWidth":20,"activeTabIndex":0,"maximizationBoundary":false,"frameId":"ZSLsfL8gK","showAddWindowButton":true,"allowDropTop":true,"heightInPx":948,"maxWidth":32767,"isMaximized":false,"allowDropLeft":true,"allowDropHeader":true}}],"config":{"workspaceId":"0XfglHadW","width":null,"minHeight":50,"height":null,"positionIndex":0,"allowDrop":true,"isPinned":false,"widthInPx":1919,"maxHeight":32767,"minWidth":40,"allowSplitters":true,"activeTabIndex":null,"maximizationBoundary":false,"frameId":"ZSLsfL8gK","heightInPx":948,"maxWidth":32767,"isMaximized":false}}],"config":{"allowDropBottom":true,"workspaceId":"0XfglHadW","minHeight":50,"allowDropRight":true,"lastActive":1667809644726,"showWindowCloseButtons":true,"allowDrop":true,"isPinned":false,"widthInPx":1920,"maxHeight":32767,"allowExtract":true,"minWidth":40,"allowSplitters":true,"showEjectButtons":true,"name":"Welcome","allowWorkspaceTabReorder":true,"context":{},"showSaveButton":true,"showAddWindowButtons":true,"allowDropTop":true,"showCloseButton":true,"isSelected":true,"heightInPx":949,"maxWidth":32767,"isHibernated":false,"allowWindowReorder":true,"allowDropLeft":true,"icon":null},"context":{}}}]}
+                {
+                    "name": "Welcome",
+                    "type": "Workspace",
+                    "metadata": null,
+                    "components": [
+                        {
+                        "type": "Workspace",
+                        "state": {
+                            "children": [
+                            {
+                                "type": "row",
+                                "children": [
+                                {
+                                    "type": "group",
+                                    "children": [
+                                    {
+                                        "type": "window",
+                                        "config": {
+                                        "minHeight": 20,
+                                        "allowReorder": true,
+                                        "widthInPx": 957,
+                                        "maxHeight": 32767,
+                                        "allowExtract": true,
+                                        "minWidth": 20,
+                                        "appName": "client_list_gd_prod",
+                                        "context": {},
+                                        "title": "Client List from SF",
+                                        "showCloseButton": true,
+                                        "isSelected": true,
+                                        "heightInPx": 918,
+                                        "maxWidth": 32767,
+                                        "isMaximized": false,
+                                        "isFocused": false
+                                        }
+                                    },
+                                    {
+                                        "type": "window",
+                                        "config": {
+                                        "minHeight": 20,
+                                        "allowReorder": true,
+                                        "widthInPx": 957,
+                                        "maxHeight": 32767,
+                                        "allowExtract": true,
+                                        "minWidth": 20,
+                                            "appName": "salesforce_login",
+                                        "context": {},
+                                            "title": "Salesforce-pls eject",
+                                        "showCloseButton": true,
+                                        "isSelected": true,
+                                        "heightInPx": 918,
+                                        "maxWidth": 32767,
+                                        "isMaximized": false,
+                                        "isFocused": false
+                                        }
+                                    }
+                                    ],
+                                    "config": {
+                                    "allowDropBottom": true,
+                                    "workspaceId": "0XfglHadW",
+                                    "width": 50,
+                                    "showMaximizeButton": true,
+                                    "minHeight": 50,
+                                    "height": null,
+                                    "allowDropRight": true,
+                                    "positionIndex": 0,
+                                    "allowReorder": true,
+                                    "allowDrop": true,
+                                    "isPinned": false,
+                                    "widthInPx": 957,
+                                    "maxHeight": 32767,
+                                    "showEjectButton": true,
+                                    "allowExtract": true,
+                                    "minWidth": 20,
+                                    "activeTabIndex": 0,
+                                    "maximizationBoundary": false,
+                                    "frameId": "ZSLsfL8gK",
+                                    "showAddWindowButton": true,
+                                    "allowDropTop": true,
+                                    "heightInPx": 948,
+                                    "maxWidth": 32767,
+                                    "isMaximized": false,
+                                    "allowDropLeft": true,
+                                    "allowDropHeader": true
+                                    }
+                                },
+                                {
+                                    "type": "group",
+                                    "children": [
+                                    {
+                                        "type": "window",
+                                        "config": {
+                                        "minHeight": 20,
+                                        "allowReorder": true,
+                                        "widthInPx": 957,
+                                        "maxHeight": 32767,
+                                        "allowExtract": true,
+                                        "minWidth": 20,
+                                        "appName": "Glue42 Core Plus Docs",
+                                        "context": {},
+                                        "title": "Documentation",
+                                        "showCloseButton": true,
+                                        "isSelected": true,
+                                        "heightInPx": 918,
+                                        "maxWidth": 32767,
+                                        "isMaximized": false,
+                                        "isFocused": false
+                                        }
+                                    },
+                                    {
+                                        "type": "window",
+                                        "config": {
+                                        "minHeight": 20,
+                                        "allowReorder": true,
+                                        "widthInPx": 0,
+                                        "maxHeight": 32767,
+                                        "allowExtract": true,
+                                        "minWidth": 20,
+                                        "appName": "context-viewer",
+                                        "context": {},
+                                        "title": "Context Viewer",
+                                        "showCloseButton": true,
+                                        "isSelected": false,
+                                        "heightInPx": 0,
+                                        "maxWidth": 32767,
+                                        "isMaximized": false,
+                                        "isFocused": false
+                                        }
+                                    },
+                                    {
+                                        "type": "window",
+                                        "config": {
+                                            "minHeight": 20,
+                                            "allowReorder": true,
+                                            "widthInPx": 0,
+                                            "maxHeight": 32767,
+                                            "allowExtract": true,
+                                            "minWidth": 20,
+                                            "appName": "interop-viewer",
+                                            "context": {},
+                                            "title": "Interop Viewer",
+                                            "showCloseButton": true,
+                                            "isSelected": false,
+                                            "heightInPx": 0,
+                                            "maxWidth": 32767,
+                                            "isMaximized": false,
+                                            "isFocused": false
+                                        }
+                                    }
+                                    ],
+                                    "config": {
+                                        "allowDropBottom": true,
+                                        "workspaceId": "0XfglHadW",
+                                        "width": 50,
+                                        "showMaximizeButton": true,
+                                        "minHeight": 50,
+                                        "height": null,
+                                        "allowDropRight": true,
+                                        "positionIndex": 1,
+                                        "allowReorder": true,
+                                        "allowDrop": true,
+                                        "isPinned": false,
+                                        "widthInPx": 957,
+                                        "maxHeight": 32767,
+                                        "showEjectButton": true,
+                                        "allowExtract": true,
+                                        "minWidth": 20,
+                                        "activeTabIndex": 0,
+                                        "maximizationBoundary": false,
+                                        "frameId": "ZSLsfL8gK",
+                                        "showAddWindowButton": true,
+                                        "allowDropTop": true,
+                                        "heightInPx": 948,
+                                        "maxWidth": 32767,
+                                        "isMaximized": false,
+                                        "allowDropLeft": true,
+                                        "allowDropHeader": true
+                                    }
+                                }
+                                ],
+                                "config": {
+                                    "workspaceId": "0XfglHadW",
+                                    "width": null,
+                                    "minHeight": 50,
+                                    "height": null,
+                                    "positionIndex": 0,
+                                    "allowDrop": true,
+                                    "isPinned": false,
+                                    "widthInPx": 1919,
+                                    "maxHeight": 32767,
+                                    "minWidth": 40,
+                                    "allowSplitters": true,
+                                    "activeTabIndex": null,
+                                    "maximizationBoundary": false,
+                                    "frameId": "ZSLsfL8gK",
+                                    "heightInPx": 948,
+                                    "maxWidth": 32767,
+                                    "isMaximized": false
+                                }
+                            }
+                            ],
+                            "config": {
+                                "allowDropBottom": true,
+                                "workspaceId": "0XfglHadW",
+                                "minHeight": 50,
+                                "allowDropRight": true,
+                                "lastActive": 1667809644726,
+                                "showWindowCloseButtons": true,
+                                "allowDrop": true,
+                                "isPinned": false,
+                                "widthInPx": 1920,
+                                "maxHeight": 32767,
+                                "allowExtract": true,
+                                "minWidth": 40,
+                                "allowSplitters": true,
+                                "showEjectButtons": true,
+                                "name": "Welcome",
+                                "allowWorkspaceTabReorder": true,
+                                "context": {},
+                                "showSaveButton": true,
+                                "showAddWindowButtons": true,
+                                "allowDropTop": true,
+                                "showCloseButton": true,
+                                "isSelected": true,
+                                "heightInPx": 949,
+                                "maxWidth": 32767,
+                                "isHibernated": false,
+                                "allowWindowReorder": true,
+                                "allowDropLeft": true,
+                                "icon": null
+                            },
+                            "context": {}
+                        }
+                        }
+                    ]
+                    }
             ]
         },
         "applications": {
@@ -25,14 +264,77 @@
                     }
                 },
                 {
-                    "name": "Glue42 Core Plus Docs",
+                    "name": "client_list_gd_prod",
                     "type": "window",
-                    "title": "Documentation",
+                    "title ": "Client List from GD",
                     "details": {
-                        "url": "https://core-docs.glue42.com/getting-started/what-is-glue42-core-plus/index.html"
+                        "url": "http://localhost:4200/#/clientlist"
                     },
                     "customProperties": {
-                        "includeInWorkspaces": true
+                        "includeInCanvas": true,
+                        "includeInWorkspaces": true,
+                        "folder": "Sales Demo",
+                        "appManagerOrder": 150
+
+                    }
+                },
+                {
+                    "name": "client_list_gd_stg",
+                    "type": "window",
+                    "title ": "[STG] Client List from GD",
+                    "details": {
+                        "url": "http://localhost:4200/#/clientlist-stg"
+                    },
+                    "customProperties": {
+                        "includeInCanvas": true,
+                        "includeInWorkspaces": true,
+                        "folder": "[STG] Demo",
+                        "appManagerOrder": 150
+
+                    }
+                },
+                {
+                    "name": "client_list_gd_dev",
+                    "type": "window",
+                    "title ": "[DEV] Client List from GD",
+                    "details": {
+                        "url": "http://localhost:4200/#/clientlist-dev"
+                    },
+                    "customProperties": {
+                        "includeInCanvas": true,
+                        "includeInWorkspaces": true,
+                        "folder": "[DEV] Demo",
+                        "appManagerOrder": 150
+
+                    }
+                },
+                {
+                    "title": "Salesforce",
+                    "type": "window",
+                    "name": "salesforce_login",
+                    "icon": "http://localhost:4200/resources/icons/sf.ico",
+                    "hidden": true,
+                    "details": {
+                        "url": "https://login.salesforce.com/",
+                        "top": 25,
+                        "left": 800,
+                        "height": 800,
+                        "width": 780,
+                        "mode": "tab",
+                        "sfMode": true,
+                        "autoInjectAPI": {
+                            "enabled": true,
+                            "autoInit": true
+                        },
+                        "preloadScripts": [
+                            "http://localhost:4200/preload-scripts/salesforce.js"
+                        ]
+                    },
+                    "customProperties": {
+                        "includeInCanvas": true,
+                        "includeInWorkspaces": true,
+                        "folder": "Sales Demo",
+                        "appManagerOrder": 150
                     }
                 },
                 {
@@ -83,6 +385,35 @@
 						"url": "http://localhost:4221/"
 					},
 					"customProperties": {}
+                },
+                {
+                    "title": "[Nerxi] Salesforce",
+                    "type": "window",
+                    "name": "salesforce_nerxi",
+                    "icon": "http://localhost:4200/resources/icons/sf.ico",
+                    "hidden": true,
+                    "details": {
+                        "url": "https://nerxi-dev-ed.develop.lightning.force.com/lightning/page/home",
+                        "top": 25,
+                        "left": 800,
+                        "height": 800,
+                        "width": 780,
+                        "mode": "tab",
+                        "sfMode": true,
+                        "autoInjectAPI": {
+                            "enabled": true,
+                            "autoInit": true
+                        },
+                        "preloadScripts": [
+                            "http://localhost:4200/preload-scripts/salesforce.js"
+                        ]
+                    },
+                    "customProperties": {
+                        "includeInCanvas": true,
+                        "includeInWorkspaces": true,
+                        "folder": "Sales Demo",
+                        "appManagerOrder": 150
+                    }
 				}
             ]
         },
