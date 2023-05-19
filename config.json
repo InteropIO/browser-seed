@@ -47,26 +47,6 @@
                                         "isMaximized": false,
                                         "isFocused": false
                                         }
-                                    },
-                                    {
-                                        "type": "window",
-                                        "config": {
-                                        "minHeight": 20,
-                                        "allowReorder": true,
-                                        "widthInPx": 957,
-                                        "maxHeight": 32767,
-                                        "allowExtract": true,
-                                        "minWidth": 20,
-                                            "appName": "salesforce_login",
-                                        "context": {},
-                                            "title": "Salesforce-pls eject",
-                                        "showCloseButton": true,
-                                        "isSelected": true,
-                                        "heightInPx": 918,
-                                        "maxWidth": 32767,
-                                        "isMaximized": false,
-                                        "isFocused": false
-                                        }
                                     }
                                     ],
                                     "config": {
@@ -97,6 +77,59 @@
                                     "allowDropLeft": true,
                                     "allowDropHeader": true
                                     }
+                                },
+                                {
+                                    "type": "group",
+                                    "children": [
+                                        {
+                                            "type": "window",
+                                            "config": {
+                                            "minHeight": 20,
+                                            "allowReorder": true,
+                                            "widthInPx": 957,
+                                            "maxHeight": 32767,
+                                            "allowExtract": true,
+                                            "minWidth": 20,
+                                            "appName": "salesforce_login",
+                                            "context": {},
+                                            "title": "Salesforce-pls eject",
+                                            "showCloseButton": true,
+                                            "isSelected": true,
+                                            "heightInPx": 918,
+                                            "maxWidth": 32767,
+                                            "isMaximized": false,
+                                            "isFocused": false
+                                            }
+                                        }
+                                    ],
+                                    "config": {
+                                        "allowDropBottom": true,
+                                        "workspaceId": "0XfglHadW",
+                                        "width": 50,
+                                        "showMaximizeButton": true,
+                                        "minHeight": 50,
+                                        "height": null,
+                                        "allowDropRight": true,
+                                        "positionIndex": 0,
+                                        "allowReorder": true,
+                                        "allowDrop": true,
+                                        "isPinned": false,
+                                        "widthInPx": 957,
+                                        "maxHeight": 32767,
+                                        "showEjectButton": true,
+                                        "allowExtract": true,
+                                        "minWidth": 20,
+                                        "activeTabIndex": 0,
+                                        "maximizationBoundary": false,
+                                        "frameId": "ZSLsfL8gK",
+                                        "showAddWindowButton": true,
+                                        "allowDropTop": true,
+                                        "heightInPx": 948,
+                                        "maxWidth": 32767,
+                                        "isMaximized": false,
+                                        "allowDropLeft": true,
+                                        "allowDropHeader": true
+                                        }
                                 },
                                 {
                                     "type": "group",
