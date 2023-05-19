@@ -1,5 +1,6 @@
 {
     "corePlusPlatform": {
+        "licenseKey": "",
         "connection": {
             "preferred": {
                 "url": "ws://localhost:8385/gw",
