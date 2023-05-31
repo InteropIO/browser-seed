@@ -6,7 +6,8 @@ const path = require("path");
 
 const clientsSources = [
     "workspace-platform/",
-    "test-sf-core-plus/"
+    "react-client/",
+    "salesforce-core-plus-demo/",
 ];
 const builtClients = [
     {
