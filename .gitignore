@@ -24,3 +24,5 @@ react-client/node_modules/*
 react-client/build/*
 workspace-platform/node_modules/*
 workspace-platform/build/*
+salesforce-core-plus-demo/node_modules/*
+salesforce-core-plus-demo/build/*

@@ -1,0 +1,23 @@
+{
+  "name": "salesforce-core-plus-demo",
+  "version": "1.0.0",
+  "description": "SF glue42core test app",
+  "private": true,
+  "main": "index.html",
+  "engines": {
+    "node": ">=18.13.0",
+    "npm": ">=8.19.3"
+  },
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "salseforce-dev@tick42.com",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  },
+  "note-dependencies": {
+    "tick42-crm": "^2.6.6"
+  }
+}
