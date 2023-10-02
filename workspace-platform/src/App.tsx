@@ -1,19 +1,19 @@
 import React from "react";
-import Workspaces, { getFrameId } from "@glue42/workspaces-ui-react";
-import "@glue42/workspaces-ui-react/dist/styles/popups.css";
-import "@glue42/workspaces-ui-react/dist/styles/goldenlayout-base.css";
-import "@glue42/workspaces-ui-react/dist/styles/glue42-theme.css";
-import "@glue42/workspaces-ui-react/dist/styles/workspaceTabV2.css";
+import Workspaces, { getFrameId } from "@interopio/workspaces-ui-react";
+import "@interopio/workspaces-ui-react/dist/styles/popups.css";
+import "@interopio/workspaces-ui-react/dist/styles/goldenlayout-base.css";
+import "@interopio/workspaces-ui-react/dist/styles/glue42-theme.css";
+import "@interopio/workspaces-ui-react/dist/styles/workspaceTabV2.css";
 import "./index.css";
-import { Glue42Web } from "@glue42/web";
+import { IOConnectBrowser } from "@interopio/browser";
 import { Glue42 } from "@glue42/desktop";
-import { Glue42Workspaces } from "@glue42/workspaces-api";
-import { useGlue } from "@glue42/react-hooks";
+import { IOConnectWorkspaces } from "@interopio/workspaces-api";
+import { useIOConnect } from "@interopio/react-hooks";
 
 const App = () => {
-    const waitForMyFrame = (glue: Glue42Web.API | Glue42.Glue) => {
-        return new Promise<Glue42Workspaces.Frame>(async (res, rej) => {
-            const unsub = await glue.workspaces?.onFrameOpened((f) => {
+    const waitForMyFrame = (io: IOConnectBrowser.API | Glue42.Glue) => {
+        return new Promise<IOConnectWorkspaces.Frame>(async (res, rej) => {
+            const unsub = await io.workspaces?.onFrameOpened((f) => {
                 if (f.id === getFrameId()) {
                     res(f);
                     if (unsub) {
@@ -21,7 +21,7 @@ const App = () => {
                     }
                 }
             });
-            const frames = await glue.workspaces?.getAllFrames();
+            const frames = await io.workspaces?.getAllFrames();
             const myFrame = frames?.find(f => f.id === getFrameId());
 
             if (myFrame) {
@@ -33,9 +33,9 @@ const App = () => {
         });
     };
 
-    useGlue(async (glue) => {
+    useIOConnect(async (io) => {
 
-        const isPlatform = (window as any).glue42core?.isPlatformFrame;
+        const isPlatform = (window as any).iobrowser?.isPlatformFrame;
 
         if (!isPlatform) {
             // if this frame is not a platform, we do not wish to load the welcome workspace
@@ -43,9 +43,9 @@ const App = () => {
             return;
         }
 
-        const myFrame = await waitForMyFrame(glue);
+        const myFrame = await waitForMyFrame(io);
         const wsp = (await myFrame.workspaces())[0];
-        const newWsp = await glue.workspaces?.restoreWorkspace("Welcome", { title: "Welcome", reuseWorkspaceId: wsp.id });
+        const newWsp = await io.workspaces?.restoreWorkspace("Welcome", { title: "Welcome", reuseWorkspaceId: wsp.id });
         await newWsp?.setTitle("Welcome");
     });
 

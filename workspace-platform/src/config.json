@@ -1,5 +1,5 @@
 {
-    "corePlusPlatform": {
+    "browserPlatform": {
         "licenseKey": "",
         "workspaces": {
             "src": "/",
@@ -92,35 +92,70 @@
                     "name": "Red",
                     "meta": {
                         "color": "red",
-                        "name": "Red"
+                        "name": "Red",
+                        "fdc3": {
+                            "id": "fdc3.channel.1",
+                            "displayMetadata": {
+                                "name": "Channel 1",
+                                "glyph": "1"
+                            }
+                        }
                     }
                 },
                 {
                     "name": "Green",
                     "meta": {
                         "color": "green",
-                        "name": "Green"
+                        "name": "Green",
+                        "fdc3": {
+                            "id": "fdc3.channel.4",
+                            "displayMetadata": {
+                                "name": "Channel 4",
+                                "glyph": "4"
+                            }
+                        }
                     }
                 },
                 {
                     "name": "Blue",
                     "meta": {
                         "color": "#66ABFF",
-                        "name": "Blue"
+                        "name": "Blue",
+                        "fdc3": {
+                            "id": "fdc3.channel.6",
+                            "displayMetadata": {
+                                "name": "Channel 6",
+                                "glyph": "6"
+                            }
+                        }
                     }
                 },
                 {
                     "name": "Pink",
                     "meta": {
                         "color": "#F328BB",
-                        "name": "Pink"
+                        "name": "Pink",
+                        "fdc3": {
+                            "id": "fdc3.channel.7",
+                            "displayMetadata": {
+                                "name": "Channel 7",
+                                "glyph": "7"
+                            }
+                        }
                     }
                 },
                 {
                     "name": "Yellow",
                     "meta": {
                         "color": "#FFE733",
-                        "name": "Yellow"
+                        "name": "Yellow",
+                        "fdc3": {
+                            "id": "fdc3.channel.3",
+                            "displayMetadata": {
+                                "name": "Channel 3",
+                                "glyph": "3"
+                            }
+                        }
                     }
                 },
                 {
@@ -134,14 +169,28 @@
                     "name": "Orange",
                     "meta": {
                         "color": "#fa5a28",
-                        "name": "Orange"
+                        "name": "Orange",
+                        "fdc3": {
+                            "id": "fdc3.channel.2",
+                            "displayMetadata": {
+                                "name": "Channel 2",
+                                "glyph": "2"
+                            }
+                        }
                     }
                 },
                 {
                     "name": "Purple",
                     "meta": {
                         "color": "#c873ff",
-                        "name": "Purple"
+                        "name": "Purple",
+                        "fdc3": {
+                            "id": "fdc3.channel.8",
+                            "displayMetadata": {
+                                "name": "Channel 8",
+                                "glyph": "8"
+                            }
+                        }
                     }
                 },
                 {
@@ -155,7 +204,14 @@
                     "name": "Cyan",
                     "meta": {
                         "color": "#80f3ff",
-                        "name": "Cyan"
+                        "name": "Cyan",
+                        "fdc3": {
+                            "id": "fdc3.channel.5",
+                            "displayMetadata": {
+                                "name": "Channel 5",
+                                "glyph": "5"
+                            }
+                        }
                     }
                 }
             ]

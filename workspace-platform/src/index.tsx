@@ -3,26 +3,26 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { GlueProvider } from "@glue42/react-hooks";
+import { IOConnectProvider } from "@interopio/react-hooks";
 import Glue from "@glue42/desktop";
-import Glue42CorePlus, { Glue42CorePlusConfig } from "@glue42/core-plus";
-import GlueWorkspaces from "@glue42/workspaces-api";
+import IOBrowserPlatform, { IOConnectBrowserPlatform } from "@interopio/browser-platform";
+import IOWorkspaces from "@interopio/workspaces-api";
 import config from "./config.json";
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlueProvider settings={{
-      webPlatform: {
-        config: Object.assign({}, config.corePlusPlatform, { glue: { libraries: [GlueWorkspaces] }, serviceWorker: { url: "/service-worker.js" } }) as Glue42CorePlusConfig,
-        factory: Glue42CorePlus
+    <IOConnectProvider settings={{
+      browserPlatform: {
+        config: Object.assign({}, config.browserPlatform, { browser: { libraries: [IOWorkspaces] }, serviceWorker: { url: "/service-worker.js" } }) as IOConnectBrowserPlatform.Config,
+        factory: IOBrowserPlatform
       },
       desktop: {
-        config: { libraries: [GlueWorkspaces], appManager: "skipIcons" },
+        config: { libraries: [IOWorkspaces], appManager: "skipIcons" },
         factory: Glue
       }
     }}>
       <App />
-    </GlueProvider>
+    </IOConnectProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

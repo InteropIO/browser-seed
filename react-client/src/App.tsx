@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import './App.css';
 import logo from './core-plus-symbol.svg';
-import { GlueContext } from '@glue42/react-hooks';
+import { IOConnectContext } from '@interopio/react-hooks';
 
 function App() {
 
-    const glue = useContext(GlueContext);
+    const io = useContext(IOConnectContext);
 
-    (window as any).glue = glue;
+    (window as any).io = io;
 
     return (
         <div className="App">
@@ -22,7 +22,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Learn Glue42 Core+
+                    Learn io.Connect Browser
                 </a>
             </header>
         </div>
