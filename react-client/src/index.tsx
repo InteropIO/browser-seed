@@ -3,23 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { GlueProvider } from '@glue42/react-hooks';
-import GlueWeb from "@glue42/web";
-import GlueWorkspaces from '@glue42/workspaces-api';
+import { IOConnectProvider } from '@interopio/react-hooks';
+import IOBrowser from "@interopio/browser";
+import IOWorkspaces from '@interopio/workspaces-api';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <GlueProvider settings={{
-            web: {
-                config: { libraries: [GlueWorkspaces] },
-                factory: GlueWeb
+        <IOConnectProvider settings={{
+            browser: {
+                config: { libraries: [IOWorkspaces] },
+                factory: IOBrowser
             }
         }}>
             <App />
-        </GlueProvider>
+        </IOConnectProvider>
     </React.StrictMode>
 );
 

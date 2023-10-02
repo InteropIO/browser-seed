@@ -1,5 +1,5 @@
 {
-    "corePlusPlatform": {
+    "browserPlatform": {
         "licenseKey": "",
         "workspaces": {
             "src": "/",
