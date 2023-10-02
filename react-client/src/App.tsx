@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './App.css';
-import logo from './core-plus-symbol.svg';
+import logo from './connect-browser.svg';
 import { IOConnectContext } from '@interopio/react-hooks';
 
 function App() {
