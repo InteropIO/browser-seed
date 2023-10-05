@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "@interopio/browser-platform": "^3.0.2",
-    "@interopio/react-hooks": "^3.0.2",
-    "@interopio/workspaces-api": "^3.0.2",
-    "@interopio/workspaces-ui-react": "^3.0.2",
+    "@interopio/browser-platform": "^3.0.3",
+    "@interopio/react-hooks": "^3.0.3",
+    "@interopio/workspaces-api": "^3.0.3",
+    "@interopio/workspaces-ui-react": "^3.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
