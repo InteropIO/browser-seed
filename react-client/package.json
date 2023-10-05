@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@interopio/react-hooks": "^3.0.2",
-    "@interopio/workspaces-api": "^3.0.2",
+    "@interopio/react-hooks": "^3.0.3",
+    "@interopio/workspaces-api": "^3.0.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
