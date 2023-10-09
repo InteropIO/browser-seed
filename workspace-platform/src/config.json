@@ -36,6 +36,50 @@
                     }
                 },
                 {
+                    "name": "manual_sf_test",
+                    "type": "window",
+                    "title ": "Manual SF testing",
+                    "details": {
+                        "url": "http://localhost:5000/"
+                    },
+                    "customProperties": {
+                        "includeInCanvas": true,
+                        "includeInWorkspaces": true,
+                        "folder": "Sales Demo",
+                        "appManagerOrder": 150
+
+                    }
+                },
+                {
+                    "title": "Salesforce",
+                    "type": "window",
+                    "name": "salesforce_login",
+                    "icon": "http://localhost:4200/resources/icons/sf.ico",
+                    "hidden": true,
+                    "details": {
+                        "url": "https://login.salesforce.com/",
+                        "top": 25,
+                        "left": 800,
+                        "height": 800,
+                        "width": 780,
+                        "mode": "tab",
+                        "sfMode": true,
+                        "autoInjectAPI": {
+                            "enabled": true,
+                            "autoInit": true
+                        },
+                        "preloadScripts": [
+                            "http://localhost:4200/preload-scripts/salesforce.js"
+                        ]
+                    },
+                    "customProperties": {
+                        "includeInCanvas": true,
+                        "includeInWorkspaces": true,
+                        "folder": "Sales Demo",
+                        "appManagerOrder": 150
+                    }
+                },
+                {
                     "name": "interop-viewer",
                     "type": "window",
                     "title": "Interop Viewer",

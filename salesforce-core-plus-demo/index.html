@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="light">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      <!-- Dynamically set -->
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="https://docs.glue42.com/vendor/style/style.css" />
+    <script src="/glue/platform.web.umd.js"></script>
+    <script src="/glue/Tick42CRM.js"></script>
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-light bg-light py-3">
+      <h5 id="appNameHeading" class="mb-0">
+        <!-- App name is displayed here -->
+      </h5>
+    </nav>
+    <div class="container-fluid d-flex flex-column flex-grow-1 overflow-auto">
+      <div id="appList">
+        <!-- App list displayed here -->
+      </div>
+
+      <div class="flex-column flex-grow-1 mt-2 overflow-auto row">
+        <div class="col-12 d-flex pr-0" style="overflow-y: scroll;">
+          <ul class="flex-grow-1 list-group" id="logs-list">
+            <!-- App status displayed here -->
+          </ul>
+        </div>
+      </div>
+
+      <footer class="row">
+        <div class="align-items-center bg-light col d-flex py-2">
+          <img
+            id="glueImg"
+            src="/assets/disconnected.svg"
+            width="16"
+            height="16"
+          />
+          <span id="glueSpan" class="ml-1 small">Disconnected</span>
+        </div>
+      </footer>
+      <form action="#">
+        <label for="command">Choose CRM command:</label>
+        <input type="hidden" value="SalesforceGlue42Connector" name="systemName" id="systemName"/>
+        <select name="command" id="command">
+            <option value="SyncContact" selected="selected">SyncContact</option>
+            <option value="SyncAccount">SyncAccount</option>
+            <!-- <option value="Get">Get(Record)</option> -->
+        </select>
+        <div>
+          <label for="manualKey">Manual-Sync Key:</label>
+          <input type="test" placeholder="example: 0030900001hYv2PAAS" name="manualKey" id="manualKey" />
+          <label for="manualKey">Note: overwrites record drop down</label>
+        </div>
+        <div class="row">
+          <div class="align-items-center bg-light col d-flex py-2">
+            <label for="nativeID">Record:</label>
+            <select name="nativeID" id="nativeID">
+              <!-- [PROD/main/Pre-sales Org] -->
+              <option value="0030900000aBhKYAA0" selected="selected">TEST 1, [PROD]</option>
+              <option value="0030900000aBhKhAAK">TEST 2, [PROD]</option>
+              <option value="0030900000aBhKNAA0">Mr. Vernon Mullen, [PROD]</option>
+              <option value="0010900000UB0zRAAT">Account 'sForce', [PROD]</option>
+              
+              <!-- [STG] -->
+              <option value="0035I000003XpgAQAS">Contact 'Mr. Vernon Mullen', [STG]</option>
+              <option value="0035I000003XpgFQAS">Contact 'Mr. Sutton Edwards', [STG]</option>
+              <option value="0035I000003XpgKQAS">Contact 'Mr. Decker Norris', [STG]</option>
+              <option value="0015I000004rZcLQAU">Account 'Royal Bank of Scotland, [STG]'</option>
+              <!-- [DEV] -->
+              <option value="0031i00000oL3KLAA0">Contact 'Mr. Vernon Mullen', [DEV]</option>
+              <option value="0031i00000AkIgIAAV">Contact 'Mr. Sutton Edwards', [DEV]</option>
+              <option value="0031i00000AkIgSAAV">Contact 'Decker Norris', [DEV]</option>
+              <option value="0015I000004rZcLQAU">Account 'Royal Bank of Scotland, [DEV]'</option>
+            </select>
+            <br>
+          </div>
+          <div class="align-items-center bg-light col d-flex py-2">
+            <label for="nativeIDsb">Record[SB]:</label>
+            <select name="nativeIDsb" id="nativeIDsb">
+              <!-- [nerxi] -->
+              <option value="0030900001hYv2PAAS">Contact 'Vernon Mullen', [nerxi]</option>
+              <option value="0030900001smNQXAA2">Contact 'Sutton Edwards', [nerxi]</option>
+              <option value="0030900001d3guoAAA">Contact 'Decker Norris', [nerxi]</option>
+              <option value="0010900001lubYQAAY">Account 'Burlington Textiles Corp of America, [nerxi]'</option>
+              <!-- [publishing Org] -->
+              <option value="0034I000027piE2QAI">Contact 'Mr. Vernon Mullen', [davidkov]</option>
+              <option value="00358000003ZhCfAAK">Contact 'Mr. Andy Young', [davidkov]</option>
+              <option value="00358000003ZhCkAAK">Contact 'Ms. Ashley James', [davidkov]</option>
+              <option value="001580000049sFKAAY">Account 'Dickenson plc, [davidkov]'</option>
+              <!-- [marto] -->
+              <option value="0030900001hIKQaAAO">Contact 'Mr. Vernon Mullen', [donevski]</option>
+              <option value="00309000003W8RAAA0">Contact 'Mr. Andy Young', [donevski]</option>
+              <option value="00309000003W8RJAA0">Contact 'Ms. Ashley James', [donevski]</option>
+              <option value="001090000043OgeAAE">Account 'Dickenson plc, [donevski]'</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="align-items-center bg-light col d-flex py-2">
+            <button
+              id="triggerCRM"
+              type="button"
+              class="btn btn-outline-primary btn-sm text-nowrap"
+            >
+              Trigger
+            </button>
+          </div>
+          <div class="align-items-center bg-light col d-flex py-2">
+            <button
+              id="triggerCRMinSB"
+              type="button"
+              class="btn btn-outline-primary btn-sm text-nowrap"
+            >
+              Trigger[SB]
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="/scripts/utils.js"></script>
+    <script src="/scripts/glue-utils.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>
