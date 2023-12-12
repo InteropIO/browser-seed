@@ -6,12 +6,12 @@ import "@interopio/workspaces-ui-react/dist/styles/glue42-theme.css";
 import "@interopio/workspaces-ui-react/dist/styles/workspaceTabV2.css";
 import "./index.css";
 import { IOConnectBrowser } from "@interopio/browser";
-import { Glue42 } from "@glue42/desktop";
+import { IOConnectDesktop } from "@interopio/desktop";
 import { IOConnectWorkspaces } from "@interopio/workspaces-api";
 import { useIOConnect } from "@interopio/react-hooks";
 
 const App = () => {
-    const waitForMyFrame = (io: IOConnectBrowser.API | Glue42.Glue) => {
+    const waitForMyFrame = (io: IOConnectBrowser.API | IOConnectDesktop.API) => {
         return new Promise<IOConnectWorkspaces.Frame>(async (res, rej) => {
             const unsub = await io.workspaces?.onFrameOpened((f) => {
                 if (f.id === getFrameId()) {
