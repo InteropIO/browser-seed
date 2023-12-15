@@ -18,7 +18,7 @@ function App() {
                 </p>
                 <a
                     className="App-link"
-                    href="https://core-docs.glue42.com/getting-started/what-is-glue42-core-plus/index.html"
+                    href="https://docs.interop.io/browser/getting-started/what-is-io-connect-browser/index.html"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

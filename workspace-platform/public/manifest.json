@@ -1,11 +1,7 @@
 {
-  "short_name": "Glue42 Core+",
-  "name": "Glue42 Core+",
+  "short_name": "io.Connect React Platform",
+  "name": "io.Connect React Platform",
   "icons": [
-    {
-      "src": "core-plus-symbol.svg",
-      "sizes": "any"
-    },
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
