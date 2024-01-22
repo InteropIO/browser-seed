@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { IOConnectProvider } from "@interopio/react-hooks";
-import Glue from "@glue42/desktop";
+import IODesktop from "@interopio/desktop";
 import IOBrowserPlatform, { IOConnectBrowserPlatform } from "@interopio/browser-platform";
 import IOWorkspaces from "@interopio/workspaces-api";
 import config from "./config.json";
@@ -18,7 +18,7 @@ ReactDOM.render(
       },
       desktop: {
         config: { libraries: [IOWorkspaces], appManager: "skipIcons" },
-        factory: Glue
+        factory: IODesktop
       }
     }}>
       <App />
