@@ -55,7 +55,7 @@ When you receive your [**io.Connect Browser**](https://glue42.com/core-plus/) li
 
 ```json
 {
-    "corePlusPlatform": {
+    "browserPlatform": {
         "licenseKey": "my-license-token"
     }
 }
